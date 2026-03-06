@@ -1,0 +1,223 @@
+
+Nicu Dorobantu <nicudorobantu3@gmail.com>
+15:29 (acum 3 minute)
+către eu
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maska.ro | Universul Măștilor de Pretutindeni</title>
+    <style>
+        :root {
+            --primary: #d4af37; /* Auriu */
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 5px;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .grid-categorii {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--dark);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .contact-placeholder {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+
+        .contact-placeholder h2 { color: var(--primary); }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            background: #111;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MASKA.ro</h1>
+    <p>Descoperă arta, tradiția și misterul din spatele fiecărei măști. De la ritualuri străvechi la eroii moderni.</p>
+</header>
+
+<div class="container">
+    <div class="grid-categorii">
+        
+        <div class="card">
+            <div class="card-content">
+                <h3>🎭 Artizanale Românești</h3>
+                <p>Măști tradiționale din piele, blană și lemn, folosite în ritualurile de iarnă și jocurile cu măști de la sat.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🎭 Venețiene (Carnaval)</h3>
+                <p>Eleganță supremă prin modele precum Bauta, Colombina sau Medico della Peste, decorate cu foiță de aur.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🖼️ Decorative de Perete</h3>
+                <p>Piese de artă interioră, de la reliefuri ceramice la măști africane sculptate manual pentru design exotic.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🦸 Super Eroi</h3>
+                <p>Replici fidele ale măștilor purtate de personajele tale preferate din universurile Marvel și DC Comics.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>✨ Carnaval</h3>
+                <p>Opțiuni colorate și accesibile pentru orice eveniment tip bal mascat, pline de pene și paiete.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🎃 Halloween</h3>
+                <p>Măști de groază, zombi, monștri și creaturi fantastice, realizate din latex de înaltă calitate.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🥳 Petreceri Tematice</h3>
+                <p>Măști amuzante, de tip emoji, animale sau celebrități, perfecte pentru poze memorabile la party.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🎭 Teatru și Operă</h3>
+                <p>Măști clasice pentru comedie și tragedie, create special pentru scenă și expresivitate maximă.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🎮 Anime & Gaming</h3>
+                <p>Cultura Cosplay prinde viață cu măști din cele mai populare jocuri video și serii anime japoneze.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>😷 Fashion & Tech</h3>
+                <p>Măști contemporane care îmbină utilul cu estetica, realizate din materiale premium sau elemente LED.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>🌍 Etnice Globale</h3>
+                <p>Colecție de măști tribale din Asia, America Latină și Oceania, fiecare purtând o poveste spirituală.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>💎 Lux & Colecție</h3>
+                <p>Piese unicat, realizate manual de artiști plastici, folosind cristale, metale prețioase și mătase.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="contact-placeholder">
+    <h2>Contact maska.ro</h2>
+    <p>Suntem în curs de amenajare. Detaliile despre locație și magazin vor fi afișate aici în curând.</p>
+    <p><strong>Email:</strong> [urmează să fie adăugat] | <strong>Telefon:</strong> [urmează să fie adăugat]</p>
+</div>
+
+<footer>
+    &copy; 2026 Maska.ro - Toate drepturile rezervate.
+</footer>
+
+</body>
+</html>
