@@ -1,85 +1,339 @@
 <!DOCTYPE html>
+
 <html lang="ro">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASKA.ro | Lux si Mister</title>
-    <style>
-        body { background-color: #000; color: #fff; margin: 0; font-family: 'Playfair Display', serif; text-align: center; }
-        .header { padding: 40px 20px; border-bottom: 1px solid #d4af37; margin-bottom: 30px; }
-        .logo { font-size: 40px; color: #d4af37; text-transform: uppercase; letter-spacing: 8px; margin: 0; font-weight: bold; }
-        .tagline { font-size: 12px; color: #d4af37; letter-spacing: 4px; margin-top: 10px; text-transform: uppercase; }
-        
-        .container { display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 20px; }
-        .category-card { width: 95%; max-width: 400px; background: #0a0a0a; border: 1px solid #1a1a1a; padding-bottom: 20px; border-radius: 5px; overflow: hidden; }
-        .category-card img { width: 100%; height: 450px; object-fit: cover; border-bottom: 1px solid #d4af37; display: block; }
-        .category-title { color: #d4af37; font-size: 20px; margin: 20px 0 10px; text-transform: uppercase; letter-spacing: 2px; }
-        .category-desc { color: #888; font-size: 14px; padding: 0 20px; line-height: 1.5; }
-        
-        footer { padding: 50px 20px; border-top: 1px solid #1a1a1a; color: #444; font-size: 12px; margin-top: 40px; }
+
+    <title>MASKA.ro – Măști Venețiene Premium, Artizanale & Masquerade</title>
+
+ 
+
+    <meta name="description"
+
+          content="MASKA.ro – Boutique premium de măști venețiene, artizanale, carnaval, decorative, steampunk și măști pentru petreceri & bal mascat. Mister, lux și stil.">
+
+ 
+
+    <meta property="og:title" content="MASKA.ro – Lux, Mister, Stil">
+
+    <meta property="og:description" content="Măști premium – venețiene, artizanale, carnaval, horror, decorative, steampunk și pop culture.">
+
+    <meta property="og:image" content="logo-maska.png">
+
+    <meta property="og:url" content="https://maska.ro">
+
+    <meta name="theme-color" content="#000000">
+
+ 
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="   body {
+
+            background-color: #000;
+
+            color: #fff;
+
+            margin: 0;
+
+            font-family: 'Inter', sans-serif;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .header {
+
+            padding: 50px 20px;
+
+        }
+
+ 
+
+        .logo-img {
+
+            width: 180px;
+
+            margin-bottom: 10px;
+
+        }
+
+ 
+
+        .tagline {
+
+            font-size: 14px;
+
+            color: #d4af37;
+
+            letter-spacing: 6px;
+
+            text-transform: uppercase;
+
+            font-family: 'Playfair Display', serif;
+
+        }
+
+ 
+
+        .container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+            gap: 40px;
+
+            padding: 30px 20px;
+
+        }
+
+ 
+
+        .category-card {
+
+            background: #0a0a0a;
+
+            border: 1px solid #1a1a1a;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            transition: transform .3s ease, box-shadow .3s ease;
+
+        }
+
+        .category-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 0 25px rgba(212,175,55,0.35);
+
+        }
+
+ 
+
+        .category-card img {
+
+            width: 100%;
+
+            height: 380px;
+
+            object-fit: cover;
+
+            border-bottom: 1px solid #d4af37;
+
+        }
+
+ 
+
+        .category-title {
+
+            color: #d4af37;
+
+            font-size: 22px;
+
+            margin: 20px 0 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-family: 'Playfair Display', serif;
+
+        }
+
+ 
+
+        .category-desc {
+
+            color: #aaa;
+
+            font-size: 15px;
+
+            padding: 0 20px 20px;
+
+            line-height: 1.6;
+
+        }
+
+ 
+
+        .cta-btn {
+
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 12px 24px;
+
+            background: #d4af37;
+
+            color: #000;
+
+            text-transform: uppercase;
+
+            font-weight: bold;
+
+            border-radius: 4px;
+
+            transition: opacity .3s;
+
+            text-decoration: none;
+
+        }
+
+        .cta-btn:hover { opacity: 0.8; }
+
+ 
+
+        footer {
+
+            padding: 40px 20px;
+
+            border-top: 1px solid #1a1a1a;
+
+            color: #555;
+
+            font-size: 12px;
+
+            margin-top: 40px;
+
+        }
+
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
 </head>
+
+ 
+
 <body>
 
+ 
+
     <div class="header">
-        <h1 class="logo">MASKA.ro</h1>
-        <div class="tagline">Lux . Mister . Stil</div>
+
+        <img class="logo-img" src="logo-maska.png" alt="MASKAter • Stil</div>
+
     </div>
+
+ 
 
     <div class="container">
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=800" alt="Venetiene">
-            <h2 class="category-title">1. Venețiene & Artizanale</h2>
-            <p class="category-desc">Măști autentice lucrate manual, decorații baroc și foiță de aur.</p>
-        </div>
+
+ 
+
+        <!-- CARD EXAMPLE (copiat pentru toate categoriile) -->
 
         <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1614030424754-24d9e9652077?auto=format&fit=crop&q=80&w=800" alt="Carnaval">
-            <h2 class="category-title">2. Carnaval & Mardi Gras</h2>
-            <p class="category-desc">Explozie de culori și pene naturale pentru petreceri vibrante.</p>
-        </div>
+
+            <img src="img/venetiene.jpg" alt="Măști venețgory-title">Măști Venețiene & Artizanale</h2>
+
+            <p class="category-desc">Piese realizate manual în stil venețian autentic — foiță de aur, detalii baroc, artă pură.</p>
+
+            <a class="cta-btn" href    </div>
+
+ 
 
         <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1534234859400-b6903d778d05?auto=format&fit=crop&q=80&w=800" alt="Decorative">
-            <h2 class="category-title">3. Decorative</h2>
-            <p class="category-desc">Piese de artă pentru design interior și colecționari pretențioși.</p>
+
+            <img src="img/carnaval.jpg" alt="Măști carnaval șiitle">Carnaval & Mardi Gras</h2>
+
+            <p class="category-desc">Culori vibrante, pene naturale și energie festivă completă.</p>
+
+            <a class="ctadelele</a>
+
         </div>
 
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&q=80&w=800" alt="Horror">
-            <h2 class="category-title">4. Halloween & Horror</h2>
-            <p class="category-desc">Impact vizual puternic și detalii realiste de calitate cinematografică.</p>
-        </div>
+ 
 
         <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=800" alt="Party">
-            <h2 class="category-title">5. Party & Evenimente</h2>
-            <p class="category-desc">Măști chic, discrete și elegante pentru baluri mascate.</p>
+
+            <img src="img/decorative.jpg" alt="Măass="category-title">Decorative</h2>
+
+            <p class="category-desc">Accente luxoase pentru pereți, galerii și colecționari.</p>
+
+            <a class="lusive</a>
+
         </div>
 
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1549410114-f87c06788878?auto=format&fit=crop&q=80&w=800" alt="Steampunk">
-            <h2 class="category-title">6. Tech & Steampunk</h2>
-            <p class="category-desc">Stil victorian industrial cu accesorii mecanice și look retro-viitor.</p>
-        </div>
+ 
 
         <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?auto=format&fit=crop&q=80&w=800" alt="Pop Culture">
-            <h2 class="category-title">7. Supereroi & Pop Culture</h2>
-            <p class="category-desc">Personajele tale preferate din filme într-o variantă premium.</p>
-        </div>
+
+            <img src="img/horror.jpg" alt="Măști horror Halloween>Halloween & Horror</h2>
+
+            <p class="category-desc">Detalii cinematografice, realism impresionant.</p>
+
+            <a class="cta-btn" href    </div>
+
+ 
 
         <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1460661419201-fd4ce18a802f?auto=format&fit=crop&q=80&w=800" alt="DIY">
-            <h2 class="category-title">8. DIY / De pictat</h2>
-            <p class="category-desc">Baze albe pentru creativitate. Pictează propria ta mască.</p>
+
+            <img src="img/party.jpg" alt="Măști pentru evenimente și partyvenimente</h2>
+
+            <p class="category-desc">Eleganță discretă pentru baluri mascate.</p>
+
+            <a class="cta-btn        </div>
+
+ 
+
+        <div class="category-card">
+
+            <img src="img/steampunk.jpg" alt="Măști steampunk și techTech & Steampunk</h2>
+
+            <p class="category-desc">Elemente mecanice & design retro‑futurist.</p>
+
+            <a class="cta-btn"</a>
+
         </div>
+
+ 
+
+        <div class="category-card">
+
+            img/pop.jpg
+
+            <h2 class="category-title">Supereroi & Pop Culture</h2>
+
+            <p class="category-desc">Personajele iconice reinterpretate luxos.</p>
+
+            #Colecția Pop</a>
+
+        </div>
+
+ 
+
+        <div class="category-card">
+
+            <img src="img/diy.jpg" alt="DIY măști de pictatle">DIY / De pictat</h2>
+
+            <p class="category-desc">Baze simple pentru creativitate pură.</p>
+
+            #Seturi DIY</a>
+
+        </div>
+
+ 
+
     </div>
 
-    <footer>
-        &copy; 2026 MASKA.ro - Toate drepturile rezervate.
-    </footer>
+ 
+
+    <footer>© 2026 MASKA.ro – Toate drepturile rezervate.</footer>
 
 </body>
+
 </html>
+
+``
