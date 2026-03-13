@@ -4,232 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MASKA.ro | Magazin Concept Masti Premium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #d4af37;
-            --dark-bg: #000000;
-            --card-bg: #0a0a0a;
-            --text-gray: #bbbbbb;
-        }
-
+        /* RESET SI FONDTURI */
         body { 
-            background-color: var(--dark-bg); 
+            background-color: #000; 
             color: #fff; 
             margin: 0; 
             font-family: 'Montserrat', sans-serif; 
+            overflow-x: hidden;
         }
 
-        /* LOGO NOU SI CURAT */
-        .brand-header {
-            padding: 80px 20px;
-            text-align: center;
+        /* HEADER SI LOGO */
+        header { 
+            padding: 120px 20px; 
+            text-align: center; 
+            background: linear-gradient(to bottom, #0a0a0a, #000);
+            border-bottom: 1px solid #d4af37; 
         }
-
-        .brand-logo {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(40px, 10vw, 70px);
-            color: var(--gold);
-            letter-spacing: 20px;
-            margin: 0;
-            text-transform: uppercase;
+        .logo { 
+            font-family: 'Cinzel', serif; 
+            font-size: clamp(40px, 8vw, 75px); 
+            color: #d4af37; 
+            letter-spacing: 25px; 
+            text-transform: uppercase; 
+            margin: 0; 
             font-weight: 700;
-            line-height: 1;
         }
-
-        .brand-sub {
-            font-size: 12px;
-            color: var(--gold);
-            letter-spacing: 5px;
+        .slogan { 
+            font-size: 11px; 
+            color: #d4af37; 
+            letter-spacing: 6px; 
+            margin-top: 30px; 
+            font-weight: 300; 
             text-transform: uppercase;
-            margin-top: 25px;
-            font-weight: 400;
         }
 
         /* GRID CATEGORII */
         .container { 
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            padding: 40px 5%;
-            max-width: 1400px;
-            margin: 0 auto;
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+            padding: 80px 20px; 
+            max-width: 1400px; 
+            margin: 0 auto; 
         }
-
         .card { 
-            background: var(--card-bg); 
+            width: 380px; 
+            background: #050505; 
             border: 1px solid #1a1a1a; 
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
+            transition: all 0.4s ease; 
+            display: flex; 
+            flex-direction: column; 
         }
-
         .card:hover { 
-            border-color: var(--gold);
-            transform: translateY(-5px);
+            border-color: #d4af37; 
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
         }
-
-        .image-box {
-            width: 100%;
-            height: 450px;
-            overflow: hidden;
-            background: #050505;
+        
+        /* IMAGINI REPREZENTATIVE */
+        .img-box { 
+            width: 100%; 
+            height: 480px; 
+            overflow: hidden; 
+            background: #000;
         }
-
-        .card img { 
+        .img-box img { 
             width: 100%; 
             height: 100%; 
             object-fit: cover; 
-            transition: transform 0.8s ease;
+            filter: grayscale(20%);
+            transition: 0.5s;
+        }
+        .card:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
         }
 
-        .info-box { 
-            padding: 30px 20px; 
-            text-align: center;
+        /* TEXT SI DESCRIERI */
+        .info { 
+            padding: 35px 25px; 
+            text-align: center; 
         }
-
-        .info-box h2 { 
+        .info h2 { 
             font-family: 'Cinzel', serif; 
-            color: var(--gold); 
-            font-size: 18px; 
+            color: #d4af37; 
+            font-size: 17px; 
+            letter-spacing: 3px; 
             margin: 0 0 15px 0; 
-            letter-spacing: 2px;
             text-transform: uppercase;
         }
-
-        .info-box p { 
-            color: var(--text-gray); 
+        .info p { 
+            color: #888; 
             font-size: 13px; 
-            margin-bottom: 20px;
-            line-height: 1.5;
+            line-height: 1.7; 
+            height: 70px; 
+            margin-bottom: 25px;
+            font-weight: 300;
         }
-
-        .cta-button {
-            display: inline-block;
-            padding: 10px 25px;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        .btn { 
+            display: inline-block; 
+            padding: 12px 30px; 
+            border: 1px solid #d4af37; 
+            color: #d4af37; 
+            text-decoration: none; 
+            font-size: 10px; 
+            letter-spacing: 3px; 
+            transition: 0.3s;
         }
-
-        /* FOOTER */
-        footer { 
-            padding: 80px 20px; 
-            text-align: center;
-            background: #050505;
-            border-top: 1px solid #111;
+        .btn:hover {
+            background: #d4af37;
+            color: #000;
         }
-
-        .footer-title {
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            font-size: 22px;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
-        }
-
-        .footer-text {
-            color: #777;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-    </style>
-</head>
-<body>
-
-    <header class="brand-header">
-        <h1 class="brand-logo">MASKA</h1>
-        <div class="brand-sub">UNIVERSUL MASTILOR . SHOWROOM EXCLUSIV . PREMIUM CONCEPT</div>
-    </header>
-
-    <div class="container">
-        <div class="card">
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1614030424754-24d9e9652077?q=80&w=600" alt="Masca Venetiana Decorata">
-            </div>
-            <div class="info-box">
-                <h2>Carnaval & Venetiene</h2>
-                <p>Masti traditionale venetiene lucrate cu detalii aurii si materiale fine pentru baluri mascate de lux.</p>
-                <a href="#" class="cta-button">Vezi Colectia</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1549410114-f87c06788878?q=80&w=600" alt="Masca Artizanala">
-            </div>
-            <div class="info-box">
-                <h2>Artizanale & Decorative</h2>
-                <p>Piese de arta realizate manual ideale pentru decor interior sau colectii private de masti rare.</p>
-                <a href="#" class="cta-button">Exploreaza Arta</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=600" alt="Masca Halloween Latex">
-            </div>
-            <div class="info-box">
-                <h2>Masti Halloween</h2>
-                <p>Masti din latex hiper-realiste cu personaje horror si monstri pentru un impact vizual garantat la petrecere.</p>
-                <a href="#" class="cta-button">Vezi Modelele</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=600" alt="Masca Party Eleganta">
-            </div>
-            <div class="info-box">
-                <h2>Party & Evenimente</h2>
-                <p>Accesorii elegante si discrete pentru petreceri private, cocktailuri si evenimente tematice exclusiviste.</p>
-                <a href="#" class="cta-button">Alege Stilul</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1557431177-36141475c676?q=80&w=600" alt="Masca LED Festival">
-            </div>
-            <div class="info-box">
-                <h2>Masti Tech & LED</h2>
-                <p>Masti moderne cu lumini LED si design futurist perfecte pentru festivaluri, DJ si petreceri techno.</p>
-                <a href="#" class="cta-button">Descopera Tech</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?q=80&w=600" alt="Masca Supereroi">
-            </div>
-            <div class="info-box">
-                <h2>Copii & Super Eroi</h2>
-                <p>Eroii preferati prind viata cu masti de calitate superioara, rezistente si confortabile pentru cei mici.</p>
-                <a href="#" class="cta-button">Vezi Eroii</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1460661419201-fd4ce18a802f?q=80&w=600" alt="Masca Alba DIY">
-            </div>
-            <div class="info-box">
-                <h2>Masti DIY</h2>
-                <p>Masti albe gata de personalizat. Seturi complete pentru a-ti crea propria masca folosind culori si pensule.</p>
-                <a href="#" class="cta-button">Creeaza Acum</a>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-title">MASKA CONCEPT STORE</div>
-        <div style="color: var(--gold); font-size: 13px; margin: 15px 0; letter-spacing: 2px;">MAGAZIN FIZIC DE DOCUMENTE SI ACCESORII - DESCHIDEM IN CURAND</div>
-        <div class="footer-text">CONTACT: OFFICE@MASKA.RO | TOATE DREPTURILE REZERVATE 2026</div>
-    </footer>
-
-</body>
-</html>
