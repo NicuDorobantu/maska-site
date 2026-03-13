@@ -3,65 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASKA.ro | Premium Masquerade Store</title>
+    <title>MASKA.ro | Magazin Concept Măști Premium</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold: #d4af37;
-            --dark-bg: #0a0a0a;
-            --card-bg: #111;
-            --text-gray: #aaa;
+            --dark-bg: #000000;
+            --card-bg: #0a0a0a;
+            --text-gray: #bbbbbb;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         body { 
-            background-color: #000; 
+            background-color: var(--dark-bg); 
             color: #fff; 
             margin: 0; 
             font-family: 'Montserrat', sans-serif; 
-            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER & LOGO */
-        header {
-            padding: 80px 20px;
+        /* LOGO CONCEPTUAL */
+        .brand-container {
+            padding: 100px 20px 60px;
             text-align: center;
-            background: linear-gradient(to bottom, #111, #000);
-            border-bottom: 1px solid var(--gold);
         }
+
+        .logo-box {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .logo-icon {
+            font-size: 50px;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 10px;
+            display: block;
+            letter-spacing: 5px;
+        }
+
+        /* Simbolul minimalist Maska */
+        .logo-symbol {
+            width: 60px;
+            height: 30px;
+            border: 2px solid var(--gold);
+            border-radius: 0 0 50px 50px;
+            margin: 0 auto 15px;
+            position: relative;
+        }
+        .logo-symbol::before, .logo-symbol::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--gold);
+            border-radius: 50%;
+            top: -5px;
+        }
+        .logo-symbol::before { left: 10px; }
+        .logo-symbol::after { right: 10px; }
 
         .logo-text { 
             font-family: 'Cinzel', serif; 
-            font-size: clamp(32px, 8vw, 60px); 
+            font-size: 52px; 
             color: var(--gold); 
-            letter-spacing: 15px; 
+            letter-spacing: 18px; 
             margin: 0; 
             text-transform: uppercase;
+            font-weight: 700;
         }
 
         .tagline { 
-            font-size: 12px; 
+            font-size: 11px; 
             color: var(--gold); 
-            letter-spacing: 7px; 
+            letter-spacing: 8px; 
             text-transform: uppercase; 
-            margin-top: 15px;
+            margin-top: 20px;
             font-weight: 300;
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
-        /* GRIDUL DE CATEGORII */
+        /* GRID CATEGORII */
         .container { 
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            padding: 80px 5%;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 60px 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .card { 
             background: var(--card-bg); 
-            border: 1px solid #222; 
-            transition: all 0.4s ease;
+            border: 1px solid #1a1a1a; 
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
             display: flex;
@@ -69,64 +105,61 @@
         }
 
         .card:hover { 
-            transform: translateY(-10px); 
             border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
 
-        /* REGLARE IMAGINI - Aici era problema */
         .image-wrapper {
             width: 100%;
-            height: 400px; /* Înălțime fixă pentru aliniere perfectă */
+            height: 450px;
             overflow: hidden;
-            background: #000;
+            background: #050505;
         }
 
         .card img { 
             width: 100%; 
             height: 100%; 
-            object-fit: cover; /* Imaginea umple spațiul fără să se deformeze */
-            transition: transform 0.6s ease;
-            filter: grayscale(20%);
+            object-fit: cover; 
+            transition: transform 0.8s ease;
         }
 
         .card:hover img {
-            transform: scale(1.1);
-            filter: grayscale(0%);
+            transform: scale(1.05);
         }
 
-        /* INFO CATEGORIE */
         .category-info { 
-            padding: 30px 20px; 
+            padding: 35px 25px; 
             text-align: center;
-            border-top: 1px solid #222;
         }
 
         .card h2 { 
             font-family: 'Cinzel', serif; 
             color: var(--gold); 
-            font-size: 18px; 
+            font-size: 19px; 
             margin: 0 0 15px 0; 
             letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .card p { 
             color: var(--text-gray); 
-            font-size: 13px; 
-            margin-bottom: 20px;
-            height: 40px; /* Aliniere text */
+            font-size: 14px; 
+            margin-bottom: 25px;
+            line-height: 1.6;
+            font-weight: 300;
         }
 
         .btn-visit {
             display: inline-block;
-            padding: 10px 25px;
+            padding: 12px 30px;
             border: 1px solid var(--gold);
             color: var(--gold);
             text-decoration: none;
-            font-size: 11px;
-            letter-spacing: 2px;
+            font-size: 10px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            transition: all 0.3s;
+            transition: var(--transition);
         }
 
         .btn-visit:hover {
@@ -134,60 +167,128 @@
             color: #000;
         }
 
+        /* FOOTER CONCEPT STORE */
         footer { 
-            padding: 60px 20px; 
+            padding: 100px 20px; 
             text-align: center;
-            border-top: 1px solid #111;
-            color: #444; 
-            font-size: 11px; 
-            letter-spacing: 3px; 
+            background: #050505;
+            margin-top: 50px;
+        }
+
+        .footer-highlight {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 24px;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+        }
+
+        .footer-sub {
+            color: #555;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .logo-text { font-size: 36px; letter-spacing: 10px; }
+            .container { padding: 40px 15px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1 class="logo-text">MASKA</h1>
-        <div class="tagline">Lux . Mister . Stil</div>
+    <header class="brand-container">
+        <div class="logo-box">
+            <div class="logo-symbol"></div>
+            <h1 class="logo-text">MASKA</h1>
+        </div>
+        <div class="tagline">Atelier de Identitate . Arta Misterului . Premium Concept</div>
     </header>
 
     <div class="container">
         <div class="card">
             <div class="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205" alt="Mască Venețiană">
+                <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205" alt="Măști Carnaval Venețiene">
             </div>
             <div class="category-info">
-                <h2>Venețiene & Artizanale</h2>
-                <p>Tradiție pură și detalii lucrate manual în foiță de aur.</p>
-                <a href="#" class="btn-visit">Vezi Colecția</a>
+                <h2>Carnaval & Venețiene</h2>
+                <p>Eleganță atemporală inspirată de balurile aristocrației italiene. Accesorii de lux pentru o prezență iconică.</p>
+                <a href="#" class="btn-visit">Descoperă Colecția</a>
             </div>
         </div>
 
         <div class="card">
             <div class="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c" alt="Mască Halloween">
+                <img src="https://images.unsplash.com/photo-1543332145-6e5a0459037c" alt="Măști Artizanale Decorative">
             </div>
             <div class="category-info">
-                <h2>Halloween & Horror</h2>
-                <p>Realism cinematografic pentru o prezență de neuitat.</p>
-                <a href="#" class="btn-visit">Vezi Colecția</a>
+                <h2>Artizanale & Decorative</h2>
+                <p>Piese de colecție realizate manual, transformând misterul într-o formă de artă pentru spații exclusiviste.</p>
+                <a href="#" class="btn-visit">Vezi Galeria</a>
             </div>
         </div>
 
         <div class="card">
             <div class="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3" alt="Mască Tech">
+                <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c" alt="Măști Halloween Premium">
             </div>
             <div class="category-info">
-                <h2>Cyber & Steampunk</h2>
-                <p>Inovație vizuală și accesorii mecanice retro-futuriste.</p>
-                <a href="#" class="btn-visit">Vezi Colecția</a>
+                <h2>Măști Halloween</h2>
+                <p>Impact vizual suprem. Design cinematografic și detalii hiper-realiste pentru un personaj memorabil.</p>
+                <a href="#" class="btn-visit">Alege Masca</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176" alt="Măști Party Evenimente">
+            </div>
+            <div class="category-info">
+                <h2>Party & Evenimente</h2>
+                <p>Minimalism și stil. Accesorii discrete create special pentru cocktail-uri și evenimente black-tie.</p>
+                <a href="#" class="btn-visit">Colecția Party</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3" alt="Măști Tech Steampunk">
+            </div>
+            <div class="category-info">
+                <h2>Măști Tech</h2>
+                <p>Fuziunea între retro-futurism și tehnologie. Un look industrial unic pentru vizionari.</p>
+                <a href="#" class="btn-visit">Explorați Tech</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3" alt="Măști Copii Super Eroi">
+            </div>
+            <div class="category-info">
+                <h2>Copii & Super Eroi</h2>
+                <p>Calitate premium pentru micii eroi. Măști durabile și sigure, care dau viață imaginației.</p>
+                <a href="#" class="btn-visit">Vezi Modelele</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1460661419201-fd4ce18a802f" alt="Măști DIY Personalizate">
+            </div>
+            <div class="category-info">
+                <h2>Măști DIY</h2>
+                <p>Baze de înaltă calitate pentru creativitate nelimitată. Creează-ți propria identitate vizuală.</p>
+                <a href="#" class="btn-visit">Începe Proiectul</a>
             </div>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 MASKA.RO — UNIVERSUL MĂȘTILOR PREMIUM
+        <div class="footer-highlight">MASKA CONCEPT STORE</div>
+        <div style="color: var(--gold); font-size: 14px; margin: 15px 0; letter-spacing: 2px;">DESCoperiți MISTERUL ÎN CURÂND — DESCHIDEREA OFICIALĂ A NOULUI SHOWROOM</div>
+        <div class="footer-sub">&copy; 2026 MASKA.RO . TOATE DREPTURILE REZERVATE</div>
     </footer>
 
 </body>
