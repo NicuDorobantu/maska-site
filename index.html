@@ -3,122 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASKA.ro | Magazin Concept Masti</title>
+    <title>MASKA.ro | Concept Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { background-color: #000; color: #fff; margin: 0; font-family: 'Montserrat', sans-serif; }
-        header { padding: 80px 20px; text-align: center; border-bottom: 1px solid #d4af37; background: #050505; }
-        .logo { font-family: 'Cinzel', serif; font-size: clamp(35px, 7vw, 65px); color: #d4af37; letter-spacing: 15px; text-transform: uppercase; margin: 0; }
-        .slogan { font-size: 11px; color: #d4af37; letter-spacing: 5px; margin-top: 20px; text-transform: uppercase; opacity: 0.8; }
-        
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 60px 20px; max-width: 1400px; margin: 0 auto; }
-        .card { width: 320px; background: #0a0a0a; border: 1px solid #1a1a1a; transition: 0.3s; display: flex; flex-direction: column; }
+        header { padding: 30px 20px; text-align: center; border-bottom: 1px solid #d4af37; background: #000; }
+        .logo-maska { max-width: 350px; width: 100%; height: auto; display: block; margin: 0 auto; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 40px 15px; max-width: 1300px; margin: 0 auto; }
+        .card { width: 300px; background: #0a0a0a; border: 1px solid #1a1a1a; transition: 0.3s; display: flex; flex-direction: column; }
         .card:hover { border-color: #d4af37; transform: translateY(-5px); }
-        
-        .img-box { width: 100%; height: 350px; overflow: hidden; background: #111; border-bottom: 1px solid #1a1a1a; }
+        .img-box { width: 100%; height: 350px; overflow: hidden; }
         .img-box img { width: 100%; height: 100%; object-fit: cover; }
-        
-        .info { padding: 25px; text-align: center; }
-        .info h2 { font-family: 'Cinzel', serif; color: #d4af37; font-size: 16px; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 15px 0; }
-        .info p { color: #999; font-size: 13px; line-height: 1.6; height: 60px; overflow: hidden; margin-bottom: 20px; font-weight: 300; }
-        .btn { display: inline-block; padding: 10px 25px; border: 1px solid #d4af37; color: #d4af37; text-decoration: none; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
-
-        footer { padding: 100px 20px; text-align: center; border-top: 1px solid #1a1a1a; background: #050505; margin-top: 50px; }
-        .footer-highlight { font-family: 'Cinzel', serif; color: #d4af37; font-size: 20px; letter-spacing: 4px; margin-bottom: 15px; }
-        .footer-status { color: #fff; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
-        .footer-copy { color: #444; font-size: 10px; margin-top: 40px; letter-spacing: 1px; }
+        .info { padding: 20px; text-align: center; }
+        .info h2 { font-family: 'Cinzel', serif; color: #d4af37; font-size: 15px; letter-spacing: 1px; text-transform: uppercase; margin: 0 0 10px 0; }
+        .info p { color: #888; font-size: 12px; line-height: 1.5; height: 55px; overflow: hidden; margin-bottom: 15px; }
+        .btn { display: inline-block; padding: 10px 20px; border: 1px solid #d4af37; color: #d4af37; text-decoration: none; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; }
+        footer { padding: 60px 20px; text-align: center; border-top: 1px solid #1a1a1a; background: #050505; margin-top: 40px; }
+        .footer-highlight { font-family: 'Cinzel', serif; color: #d4af37; font-size: 18px; letter-spacing: 3px; margin-bottom: 10px; }
+        .footer-status { color: #fff; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 class="logo">MASKA</h1>
-        <div class="slogan">MAGAZIN FIZIC . CONCEPT PREMIUM . SHOWROOM</div>
+        <img src="logo.jpg" alt="MASKA Logo" class="logo-maska">
     </header>
 
     <div class="container">
         <div class="card">
-            <div class="img-box">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJdZpJkU41a4ey2JLU1mhIBVhp0SC0tnEMIw&s?v=2" alt="Masti Carnaval">
-            </div>
-            <div class="info">
-                <h2>Masti Carnaval & Venetiene</h2>
-                <p>Eleganta venetiana autentica. Masti lucrate manual cu detalii pretioase pentru evenimente exclusiviste.</p>
-                <a href="#" class="btn">Descopera</a>
-            </div>
+            <div class="img-box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJdZpJkU41a4ey2JLU1mhIBVhp0SC0tnEMIw&s" alt="Masti Carnaval"></div>
+            <div class="info"><h2>Carnaval & Venetiene</h2><p>Eleganta venetiana autentica. Masti lucrate manual.</p><a href="#" class="btn">Vezi Colectia</a></div>
         </div>
-
         <div class="card">
-            <div class="img-box">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQM94jcE1crwAyW9HnJmNraaigjRb8mRWhWg&s?v=2" alt="Masti Artizanale">
-            </div>
-            <div class="info">
-                <h2>Masti Artizanale & Decorative</h2>
-                <p>Arta si mister pentru casa ta. Piese de colectie care transforma orice spatiu intr-o galerie.</p>
-                <a href="#" class="btn">Exploreaza</a>
-            </div>
+            <div class="img-box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQM94jcE1crwAyW9HnJmNraaigjRb8mRWhWg&s" alt="Masti Artizanale"></div>
+            <div class="info"><h2>Masti Artizanale</h2><p>Arta si mister. Piese de colectie pentru casa ta.</p><a href="#" class="btn">Exploreaza</a></div>
         </div>
-
         <div class="card">
-            <div class="img-box">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1opUy-q694taj5tBgCMAV5kpWYjXFeGbYTg&s?v=2" alt="Masti Halloween">
-            </div>
-            <div class="info">
-                <h2>Masti Halloween</h2>
-                <p>Impact vizual garantat. Masti horror realiste si personaje iconice pentru o noapte de neuitat.</p>
-                <a href="#" class="btn">Alege Masca</a>
-            </div>
+            <div class="img-box"><img src="diy.jpg" alt="Masti DIY"></div>
+            <div class="info"><h2>Masti DIY & Creative</h2><p>Creeaza-ti propria masca. Modele gata de pictat.</p><a href="#" class="btn">Creeaza Acum</a></div>
         </div>
-
         <div class="card">
-            <div class="img-box">
-                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSJQsNFHA_ncLkslqea13qpxgIALQqdMb_sz5pCNgVRF66BmyEoYzxL3oREeyb2UklvkIqXZsHsKxlqoAjKP-SuuBxwIX03gRZbHPYtyWah&usqp=CAc?v=2" alt="Masti Party">
-            </div>
-            <div class="info">
-                <h2>Masti Party & Evenimente</h2>
-                <p>Stil si distractie la orice petrecere. Accesorii moderne pentru evenimente tematice si baluri.</p>
-                <a href="#" class="btn">Colectia Party</a>
-            </div>
+            <div class="img-box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPznLqHKDG4Yeoaq0yj6xjPhPKfbM8AwwvHg&s" alt="Masti Tech"></div>
+            <div class="info"><h2>Masti Tech & Cyber</h2><p>Viitorul este aici. Masti futuriste pentru festivaluri.</p><a href="#" class="btn">Descopera Tech</a></div>
         </div>
-
         <div class="card">
-            <div class="img-box">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPznLqHKDG4Yeoaq0yj6xjPhPKfbM8AwwvHg&s?v=2" alt="Masti Tech">
-            </div>
-            <div class="info">
-                <h2>Masti Tech</h2>
-                <p>Viitorul este aici. Masti futuriste si accesorii cyber pentru festivaluri si pasionatii de tech.</p>
-                <a href="#" class="btn">Descopera Tech</a>
-            </div>
+            <div class="img-box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1opUy-q694taj5tBgCMAV5kpWYjXFeGbYTg&s" alt="Masti Halloween"></div>
+            <div class="info"><h2>Masti Halloween</h2><p>Impact vizual garantat. Masti horror realiste.</p><a href="#" class="btn">Alege Masca</a></div>
         </div>
-
         <div class="card">
-            <div class="img-box">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvouLcwY-pxU6uc-Su9_gJeR7ldeQDr8QAFA&s?v=2" alt="Masti Copii">
-            </div>
-            <div class="info">
-                <h2>Masti Copii & Supereroi</h2>
-                <p>Eroii preferati prind viata. Masti de calitate, sigure si colorate pentru micii aventurieri.</p>
-                <a href="#" class="btn">Vezi Eroii</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-box">
-                <img src="https://images.unsplash.com/photo-1549410114-f87c06788878?q=80&w=500&v=2" alt="Masti DIY">
-            </div>
-            <div class="info">
-                <h2>Masti DIY</h2>
-                <p>Creativitatea ta nu are limite. Masti albe gata de personalizat pentru proiectul tau unic.</p>
-                <a href="#" class="btn">Creeaza Acum</a>
-            </div>
+            <div class="img-box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvouLcwY-pxU6uc-Su9_gJeR7ldeQDr8QAFA&s" alt="Masti Copii"></div>
+            <div class="info"><h2>Copii & Supereroi</h2><p>Eroii preferati prind viata. Masti sigure si colorate.</p><a href="#" class="btn">Vezi Eroii</a></div>
         </div>
     </div>
 
     <footer>
         <div class="footer-highlight">MASKA CONCEPT STORE</div>
-        <div class="footer-status">UN NOU MAGAZIN CONCEPT - DESCHIDEM IN CURAND</div>
-        <div class="footer-copy">&copy; 2026 MASKA.RO . TOATE DREPTURILE REZERVATE</div>
+        <div class="footer-status">SHOWROOM PREMIUM - DESCHIDEM ÎN CURÂND</div>
     </footer>
 
 </body>
